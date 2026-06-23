@@ -6,7 +6,7 @@ uvicorn[standard]>=0.24.0
 requests>=2.31.0
 
 # DuckDuckGo search
-duckduckgo-search>=5.0.0
+ddgs
 
 # Templating (Jinja2 is included with FastAPI but listed for clarity)
 jinja2>=3.1.0

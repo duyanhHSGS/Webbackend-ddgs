@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MugiGPT</title>
+</head>
+
+<body>
+
+    <h1>Chad GPT</h1>
+
+    <input id="msg" style="width:400px;" />
+
+    <button onclick="send()">
+        Send
+    </button>
+
+    <pre id="chat"></pre>
+
+    <script>
+
+        async function send() {
+
+            let msg =
+                document.getElementById("msg").value;
+
+            let r = await fetch(
+                "/chat",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        message: msg
+                    })
+                }
+            );
+
+            let data = await r.json();
+
+            document.getElementById("chat")
+                .textContent +=
+                "\n\nYOU: " + msg +
+                "\nAI: " + data.response;
+        }
+
+    </script>
+
+</body>
+
+</html>

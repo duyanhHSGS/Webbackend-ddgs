@@ -1,0 +1,12 @@
+# Web framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+
+# HTTP client
+requests>=2.31.0
+
+# DuckDuckGo search
+duckduckgo-search>=5.0.0
+
+# Templating (Jinja2 is included with FastAPI but listed for clarity)
+jinja2>=3.1.0

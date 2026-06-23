@@ -9,7 +9,7 @@ import json
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 LLM_URL = "http://172.21.10.147:1234/v1/chat/completions" # replace here
-MODEL = "google/gemma-4-12b-quat"
+MODEL = "google/gemma-4-12b-qat"
 
 
 # -------------------------

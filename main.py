@@ -8,8 +8,8 @@ import json
 
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
-LLM_URL = "http://172.21.10.147:1234/v1/chat/completions"
-MODEL = "qwen/qwen3-coder-next"
+LLM_URL = "http://172.21.10.147:1234/v1/chat/completions" # replace here
+MODEL = "google/gemma-4-12b-quat"
 
 
 # -------------------------
@@ -133,4 +133,4 @@ async def chat(data: dict):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="localhost", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
